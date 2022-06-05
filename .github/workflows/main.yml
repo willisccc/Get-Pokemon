@@ -15,4 +15,6 @@ jobs:
           pokemon_id: 1
       # Use the pokemon_name output from our action (id:pokemon)
       - name: Get the pokemon
-        run: echo "${{ steps.pokemon.outputs.pokemon_name }}"
+        run: |
+          echo "${{ steps.pokemon.outputs.pokemon_name }}"
+          echo "${{ steps.pokemon.outputs.pokemon_front }}"
