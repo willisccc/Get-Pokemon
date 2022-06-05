@@ -5,6 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     name: We test it locally with act
     steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE
+      - uses: actions/checkout@v3
+      # Run
       - name: Get Pokemon name
         uses: ./ # Uses an action in the root directory
         id: pokemon
